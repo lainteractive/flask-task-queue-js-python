@@ -3,7 +3,6 @@ from celery import Celery
 from redis import ConnectionPool, Redis
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = config.SECRET_KEY
 redis_connection_pool = ConnectionPool.from_url(os.environ.get('REDIS_URL', 'redis://localhost:6379'))
 
 # CELERY SETUP
